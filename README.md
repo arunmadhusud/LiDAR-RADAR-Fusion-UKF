@@ -8,6 +8,12 @@ The map of the UKF project is shown below:
 
 The Normalized Innovation Squared (NIS) values for LiDAR and Radar measurements are plotted using the python wrapper for the C++ code built using pybind11.
 
+## Dependencies
+* cmake >= 2.8
+* pcl = 1.2
+* pybind11
+* Eigen 3.3
+
 ## Installation
 
 1. Clone the project repository and open the project:
