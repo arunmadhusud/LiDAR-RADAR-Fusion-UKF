@@ -1,6 +1,6 @@
 ## Unscented Kalman Filter Project for LiDAR and Radar Fusion
 
-This project is a part of the Udacity Self-Driving Car Nanodegree Program. The goal of this project is to implement an Unscented Kalman Filter to estimate the state of a moving object of interest with noisy LiDAR and Radar measurements.
+This project is a part of the Udacity Self-Driving Car Nanodegree Program. The goal of this project is to implement an Unscented Kalman Filter to estimate the state of moving objects around the ego vehicle using noisy LiDAR and Radar measurements.
 
 The map of the UKF project is shown below:
 
@@ -43,7 +43,10 @@ The gif below shows the results of the tracking using the Unscented Kalman Filte
 
 <img src="./media/results.gif" alt="results" width="500"/>
 
-The green vehicle in the animation represents the ego vehicle, and the blue vehicle represents the tracked object. The red dots represent the LiDAR measurement. The green spheres then show the predicted position for the car in the future over a 2 second interval. The number of green spheres represents the number of positions to interpolate the time interval.
+The green vehicle in the animation represents the ego vehicle, and the blue vehicle represents the tracked object. The red spheres above cars represent the (x,y) lidar detection and the purple lines show the radar measurements with the velocity magnitude along the detected angle. 
+The green spheres then show the predicted position for the car in the future over a 2 second interval and green magnitude arrows shows estimated velocity value and direction.  The number of green spheres represents the number of positions to interpolate the time interval. 
+
+In this project the motion model used is Constant Turn Rate and Velocity Magnitude (CTRV), which assumes constant velocity and turning rate. Since the cars do not have constant turning rates we can see the predicted paths swing around and take a while to correct after the car begins moving straight again.
 
 The RMSE values for the UKF are also shown in the gif. 
 
