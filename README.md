@@ -43,12 +43,13 @@ The gif below shows the results of the tracking using the Unscented Kalman Filte
 
 <img src="./media/results.gif" alt="results" width="500"/>
 
-The green vehicle in the animation represents the ego vehicle, and the blue vehicle represents the tracked object. The red spheres above cars represent the (x,y) lidar detection and the purple lines show the radar measurements with the velocity magnitude along the detected angle. 
-The green spheres then show the predicted position for the car in the future over a 2 second interval and green magnitude arrows shows estimated velocity value and direction.  The number of green spheres represents the number of positions to interpolate the time interval. 
+The green vehicle in the animation represents the ego vehicle, and the blue vehicles represent the tracked objects. The red spheres above blue cars represent the (x,y) lidar detection and the purple lines show the radar measurements with the velocity magnitude along the detected angle. 
+
+The green spheres then show the predicted position for the car in the future over a 2 second interval and green magnitude arrows show the estimated velocity value and direction.  The number of green spheres represents the number of positions to interpolate the time interval. 
 
 In this project the motion model used is Constant Turn Rate and Velocity Magnitude (CTRV), which assumes constant velocity and turning rate. Since the cars do not have constant turning rates we can see the predicted paths swing around and take a while to correct after the car begins moving straight again.
 
-The RMSE values for the UKF are also shown in the gif. 
+The RMSE values for the UKF are also shown in the gif and is well within the threshold values ([0.30, 0.16, 0.95, 0.70]) for the project.
 
 The NIS values for LiDAR and Radar measurements for car 2 the assumed UKF parameters are shown below:
 
